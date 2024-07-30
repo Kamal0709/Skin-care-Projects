@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skincare Products in My Collection</title>
+<link rel="stylesheet" href="kamal.css">
+<style>
+    body {
+        background: url('https://img.freepik.com/free-photo/beautiful-pink-rose-flowers-background_23-2148760577.jpg') no-repeat center center fixed;
+        background-size: cover;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+    div {
+        height: auto; /* Adjusted height to fit content */
+        width: 500px;
+        background-color: rgba(0, 0, 139, 0.8); /* Semi-transparent dark blue */
+        margin: 20px auto;
+        border-radius: 15px;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    h1, h2 {
+        color: #FFA500; /* Orange color */
+        background-color: darkblue;
+        text-align: center;
+        margin-top: 24px;
+    }
+    label {
+        font-size: 1.2rem;
+        color: #FFA500; /* Orange color */
+        display: block;
+        margin: 15px 0 5px 0; /* Adjust margin for better alignment */
+    }
+    input[type="text"] {
+        width: 60%;
+        padding: 10px 20px;
+        margin: 10px auto;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        display: block;
+    }
+    input[type="radio"] {
+        margin: 0 10px 0 0; /* Adjust margin for better spacing */
+    }
+    .radio-group {
+        display: flex;
+        justify-content: space-around; /* Space out radio buttons */
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
+    .radio-group label {
+        margin: 0 15px; /* Adjust margin for better spacing */
+        display: flex;
+        align-items: center; /* Center align radio button with label text */
+    }
+    .submit-btn {
+        width: 100%;
+        padding: 10px 20px;
+        color: white;
+        background-color: #FFA500; /* Orange color */
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 20px;
+        transition: background-color 0.3s;
+    }
+    .submit-btn:hover {
+        background-color: #ff8c00; /* Darker orange */
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+</style>
+<script>
+    function handleSubmit(event) {
+        event.preventDefault(); // Prevent the form from submitting normally
+        alert("Updated Successfully...Thank You!"); // Display the alert message
+        window.location.href = 'index.html'; // Redirect to the index page
+    }
+</script>
+</head>
+<body>
+<div>
+    <h1>Welcome to Essential Skicares</h1>
+    <form action="backend.php" onsubmit="handleSubmit(event)">
+        <label for="product-name">Enter the Product Name:</label>
+        <input type="text" id="product-name" name="product-name" placeholder="Enter Product Name" required>
+        <label for="user-name">Enter Your Name:</label>
+        <input type="text" id="user-name" name="user-name" placeholder="Enter Your Name" required>
+        <label for="days">Enter Number of Days:</label>
+        <input type="text" id="days" name="days" placeholder="Enter the Number of Days" required>
+        <label for="price">Enter the Price of the Product:</label>
+        <input type="text" id="price" name="price" placeholder="Enter the Price of the Product" required>
+        <h2>Choose Your Skincare Category</h2>
+        <div class="radio-group">
+            <label><input type="radio" name="product-type" value="Cleanser" required> Cleanser</label>
+            <label><input type="radio" name="product-type" value="Moisturizer" required> Moisturizer</label>
+            <label><input type="radio" name="product-type" value="Serum" required> Serum</label>
+            <label><input type="radio" name="product-type" value="Sunscreen" required> Sunscreen</label>
+        </div>
+        <button type="submit" class="submit-btn">Submit</button>
+    </form>
+</div>
+</body>
+</html>

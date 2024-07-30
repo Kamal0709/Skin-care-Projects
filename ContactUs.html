@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us - College Library Management System</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f1f1f1;
+  margin: 0;
+  padding: 0;
+}
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+h1 {
+  font-size: 32px;
+  margin: 0;
+}
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+form {
+  margin-top: 20px;
+}
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+input[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+}
+input[type="submit"]:hover {
+  background-color: #555;
+}
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+</style>
+</head>
+<body>
+<header>
+<h1>Contact Us</h1>
+</header>
+<div class="container">
+<p>
+  If you have any questions, feedback, or suggestions
+  regarding your <span class="highlight">Essence</span>, please feel free to
+  reach out to us. We value your input and strive to provide
+  the best
+  possible Essence
+  community.
+</p>
+<form id="contactForm">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" required>
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required>
+  <label for="message">Message:</label>
+  <textarea id="message" name="message" rows="5" required></textarea>
+  <input type="submit" value="Submit">
+</form>
+</div>
+<footer>
+&copy; 2023 Essence. All rights reserved. | Designed by Author
+</footer>
+
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the form from submitting normally
+    alert('Noted!');
+    // Optionally, you can add code here to handle the form data submission via AJAX
+    this.reset(); // Reset the form fields after submission
+  });
+</script>
+</body>
+</html>
